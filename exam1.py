@@ -318,7 +318,7 @@ print(f" Total tax for your {salary} are : {tax}")
 # complex loops 2
 # print("complex loops 2")
 # list_states_vote: list[int] = []
-# end: int = 12
+# end: int = 44
 # list_number_vote: list[int] = [1, 2, 3, 4]
 # option_vote: list[str] = ["favor", "against", "avoided", "veto"]
 #
