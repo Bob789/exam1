@@ -11,6 +11,7 @@
 # print(f" smaller {smaller}")
 # print(f" smaller {smaller}")
 # print(f" smaller {smaller}")
+from random import random
 
 # solution if 2
 # print(" solution if 2")
@@ -41,12 +42,37 @@
 # minute: int = movie_time_min % 60
 # print(f"houer : {houer}  minute : {minute}" )
 
+# solution if 5
+# print(" solution if 5")
+# while True:
+#     numbers: str = str(input("Enter number 4 digit: "))
+#     if len(numbers) == 4:
+#         if numbers.isdigit():
+#             print("The last digit are :", numbers[-1])
+#             break
+
+# solution if 6
+# print(" solution if 6")
+# while True:
+#     numbers: str = str(input("Enter number 4 digit: "))
+#     if len(numbers) == 4:
+#         if numbers.isdigit():
+#             print("The second digit from the end are :", numbers[-2])
+#             break
+
+# solution if 7
+# print(" solution if 7")
+# num: int = int(input("Enter number :"))
+# print(num)
+#
+# ahadot = num % 10
+# asarot = num // 10
+# print(f" The sum fo {asarot} + {ahadot} = {ahadot + asarot}")
+
 # solution if 8
 # print(" solution if 8")
 # num: int = int(input("Enter number :"))
-# ahadot: int
-# asarot: int
-#
+
 # print(num)
 # ahadot = num % 10
 # print(ahadot)
@@ -62,6 +88,39 @@
 # else:
 #     print(f"Odd {num}")
 
+
+# solution if 10
+# print(" solution if 10")
+# salary = int(input("Enter a salary: "))
+# tax: float = 0
+# if salary <= 6000:
+#     print(f"for {salary} you pay tax {tax}")
+# if 6000 < salary <= 12000:
+#     tax = (salary - 6000) * 0.1
+# if 12000 < salary <= 18000:
+#     tax = tax + (salary - 1200) * 0.2
+# if 18000 < salary <= 25000:
+#     tax = tax + (salary - 1800) * 0.3
+# if 25000 < salary <= 35000:
+#     tax = tax + (salary - 2500) * 0.4
+# if 35000 < salary <= 50000:
+#     tax = tax + (salary - 3500) * 0.45
+# if salary > 50000:
+#     tax = tax + (salary - 50000) * 0.51
+#
+# print(f" Total tax for your {salary} are : {tax}")
+
+# solution if 11
+# print(" solution if 11")
+# age = float(input("Enter a age: "))
+# height = float(input("Enter a height: "))
+#
+# if 8 <= age <= 18 and 115 <= height:
+#     print("You may allow to enter roller coaster")
+# elif 18 < age and 100 < height:
+#     print(print("You may allow to enter roller coaster"))
+# else:
+#     print("You are not allow to enter roller coaster")
 
 # -----------------------------------------------------------------------------------
 
@@ -160,6 +219,52 @@
 #
 # print(f" {numa} * {numb} = {numab}")
 
+#process data 5
+# print(" Process data: 5")
+# base: int = int(input("Enter number1 :"))
+# exponent: int = int(input("Enter number2 :"))
+# power: int = base
+# count = exponent
+# while count > 1:
+#     power *= base
+#     count -=1
+#
+# print(F" The Power are :{power}")
+
+#process data 6
+# print(" Process data: 6")
+# number: str = str(input("enter number :"))
+# digit: str = str(input("enter digit :"))
+#
+# if digit in number:
+#     print(True)
+# else:
+#     print(False)
+
+#process data 7
+# print(" Process data: 7")
+# num1: int = int(input(" Enter number 1:"))
+# num2: int = int(input(" Enter number 1:"))
+# big_number_devided: int = 0
+#
+# list_d = [i for i in range(1, int(num1) + 1) if num1 % i == 0]
+# list_e = [i for i in range(1, int(num2) + 1) if num2 % i == 0]
+#
+# for i in list_d:
+#     if i in list_e:
+#         big_number_devided = i
+#
+# print(f" The big number devided :{big_number_devided}")
+
+#process data 8
+# print(" Process data: 8")
+# x: int = int(input("Enter number to check is prime number :"))
+# if x > 1 and not any(x % i == 0 for i in range(2, int(x ** 0.5) + 1)):
+#     print(f"{x} is a prime number ")
+# else:
+#     print(f"{x} is not a prime number ")
+
+
 #----------------------------------------------------------------------------------------
 # complex loops 1
 # from statistics import mean
@@ -191,7 +296,34 @@
 #
 # print(list_temperature)
 
-
+# complex loops 2
+# import random
+# print("Complex loops")
+# list_states_vote: list[str] = []
+# end: int = 10
+# list_number_vote: list[int] = [1, 2, 3, 4]
+# option_vote: list[str] = ["favor", "against", " avoided", "veto"]
+# # option_vote: list[str] = ["aa", "bb", "cc", " dd"]
+# topic: str = str(input("What is the topic issue to vote :"))
+# print(f"We are voting on an {topic} issue :")
+# vote: str =  ""
+# for i in range(1, end + 1):
+#     # word = str(input(f"Enter vote  {vote} :"))
+#     # list_states_vote.append(word)
+#     list_states_vote.append(random.choice(list_number_vote))
+#     vote = list_states_vote[i - 1]
+#     if vote == list_number_vote[3]:
+#         print(f" country {i} vote {list_number_vote[3]}")
+#         break
+#     print()
+#
+#     for vote in option_vote:
+#          for i in range(0, len(list_states_vote)):
+#             if vote == option_vote[i]:
+#                 print(f" The first country which vote {option_vote[i]} are {list_states_vote.count(option_vote[i])}")
+#                 break
+#
+# print(list_states_vote)
 
 
 
