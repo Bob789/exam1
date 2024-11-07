@@ -92,25 +92,42 @@ from sys import flags
 
 
 # solution if 10
-# print(" solution if 10")
-# salary = int(input("Enter a salary: "))
-# tax: float = 0
-# if salary <= 6000:
-#     print(f"for {salary} you pay tax {tax}")
-# if 6000 < salary <= 12000:
-#     tax = (salary - 6000) * 0.1
-# if 12000 < salary <= 18000:
-#     tax = tax + (salary - 1200) * 0.2
-# if 18000 < salary <= 25000:
-#     tax = tax + (salary - 1800) * 0.3
-# if 25000 < salary <= 35000:
-#     tax = tax + (salary - 2500) * 0.4
-# if 35000 < salary <= 50000:
-#     tax = tax + (salary - 3500) * 0.45
-# if salary > 50000:
-#     tax = tax + (salary - 50000) * 0.51
-#
-# print(f" Total tax for your {salary} are : {tax}")
+print(" solution if 10")
+salary = int(input("Enter a salary: "))
+tax: float = 0
+if salary <= 6000:
+    print(f"for {salary} you pay tax {tax}")
+if 6000 < salary:
+    if salary < 12001:
+        tax = (salary - 6000) * 0.1
+    else:
+        tax = (12000 - 6000) * 0.1
+if 12000 < salary:
+    if salary < 18001:
+        tax = tax + (salary - 12000) * 0.2
+    else:
+        tax = tax + (18000 - 12000) * 0.2
+if 18000 < salary:
+    if salary < 25001:
+        tax = tax + (salary - 18000) * 0.3
+    else:
+        tax = tax + (25000 - 18000) * 0.3
+if 25000 < salary:
+    if salary < 35001:
+        tax = tax + (salary - 25000) * 0.4
+    else:
+        tax = tax +(35000 - 25000) * 0.4
+if 35000 < salary:
+    if salary < 50001:
+        tax = tax + (salary - 35000) * 0.45
+    else:
+        tax = tax + (50000 - 35000) * 0.45
+if salary > 50000:
+    tax = tax + (salary - 50000) * 0.51
+
+
+
+print(f" Total tax for your {salary} are : {tax}")
 
 # solution if 11
 # print(" solution if 11")
