@@ -11,7 +11,9 @@
 # print(f" smaller {smaller}")
 # print(f" smaller {smaller}")
 # print(f" smaller {smaller}")
+from operator import index
 from random import random
+from sys import flags
 
 # solution if 2
 # print(" solution if 2")
@@ -297,33 +299,37 @@ from random import random
 # print(list_temperature)
 
 # complex loops 2
-# import random
-# print("Complex loops")
-# list_states_vote: list[str] = []
-# end: int = 10
+# print("complex loops 2")
+# list_states_vote: list[int] = []
+# end: int = 12
 # list_number_vote: list[int] = [1, 2, 3, 4]
-# option_vote: list[str] = ["favor", "against", " avoided", "veto"]
-# # option_vote: list[str] = ["aa", "bb", "cc", " dd"]
-# topic: str = str(input("What is the topic issue to vote :"))
-# print(f"We are voting on an {topic} issue :")
-# vote: str =  ""
-# for i in range(1, end + 1):
-#     # word = str(input(f"Enter vote  {vote} :"))
-#     # list_states_vote.append(word)
-#     list_states_vote.append(random.choice(list_number_vote))
-#     vote = list_states_vote[i - 1]
-#     if vote == list_number_vote[3]:
-#         print(f" country {i} vote {list_number_vote[3]}")
+# option_vote: list[str] = ["favor", "against", "avoided", "veto"]
+#
+# topic: str = input("What is the topic issue to vote on: ")
+# print(f"We are voting on a {topic} issue:")
+# flag: bool = False
+# for i in range(1, end):
+#     if flag:
 #         break
-#     print()
-#
-#     for vote in option_vote:
-#          for i in range(0, len(list_states_vote)):
-#             if vote == option_vote[i]:
-#                 print(f" The first country which vote {option_vote[i]} are {list_states_vote.count(option_vote[i])}")
+#     while True:
+#         try:
+#             vote = int(input("Enter vote (1 | 2 | 3 | 4): "))
+#             if vote in list_number_vote:
+#                 list_states_vote.append(vote)  # Add the valid vote to the list
+#                 if 4 in list_states_vote:
+#                     print(f" country {len(list_states_vote)} vote {option_vote[3]}")
+#                     flag = True
+#                     break
 #                 break
+#             else:
+#                 print("Invalid choice. Please enter 1, 2, 3, or 4")
+#         except ValueError:
+#             print("Invalid input. Please enter a number between 1 and 4")
 #
-# print(list_states_vote)
+# print("Votes collected:", list_states_vote)
+# print(f" The first country which vote {option_vote[0]} are {list_states_vote.index(1)+1}")
+# print(f" The first country which vote {option_vote[1]} are {list_states_vote.index(2)+1}")
+
 
 
 
